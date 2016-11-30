@@ -1,0 +1,98 @@
+{% extends "headers.html" %}
+
+{% block content %}
+
+<html>
+
+<h1>Social housing in <em>Queensland, Australia</em></h1>
+
+<p>
+
+<img src="https://s-media-cache-ak0.pinimg.com/736x/27/69/78/2769783453f6fdbd74707e6e76256692.jpg" alt="Brisbane" width="30%" align="right">
+
+Social housing in Queensland, Australia, is either provided by the government, or by non-profit organizations. This page provides the following information:
+<p> ●	Characteristics of social housing in different Local Government Areas (LGA) in Queensland.
+<P> ●	A geographic map of Queensland indicating the economic disadvantage per LGA in quintiles (highest 20% zu lowest 20%).
+<p> ●	A plot showing the average number of vacancy days by property size for the most disadvantaged LGA.
+<p>
+The data on social housing provides great insights into existing gaps of demand and supply of social housing.
+One of the main findings is that in areas of economic disadvantage, less money is spent on the maintenance of social housing.
+Also, not surprisingly, the demand is higher in areas of higher economic disadvantage.
+The government should focus on providing better supply in such areas and adjust the supply to the demand considering the property size (number of bedrooms).
+<p>
+<p>
+
+<div style="background-color:grey;color:white;padding:20px;">
+  <h2 id="C1">Local Government Areas:</h2>
+  <p>
+    <form action="{{ form_action }}"
+          method="{{ form_method }}">
+      {% if form_method == "post" %}
+        {% csrf_token %}
+      {% endif %}
+
+      {{ form.as_p }}
+    </form>
+  {{ html_table | safe }}
+  <p>
+  here goes the table <em>to be filtered via LGA - via block statement</em>
+  <p>
+  <a href="#top">back to the top</a>
+  </div>
+
+<div style="background-color:lightgrey;color:white;padding:20px;">
+  <h2 id="C2">Map of Queensland</h2>
+  <p>
+  According to the World Bank, the speed and scale of urbanization brings challenges, including meeting accelerated demand for affordable housing, well-connected transport systems, and other infrastructure.
+  For future analysis and adequate urban planning of social housing in Queensland, Australia, it is crucial to understand the demand and supply side.
+  To understand the demand side, we consider the SEIFA economic disadvantage index per Local Government Areas (LGA). It is reasonable to infer that the LGAs in the lowest quintile will require a larger intervention by the government, including social housing.
+  The following map provides insights of <em>economic disadvantage per LGAs in Queensland</em>.
+  <p>
+  <img src='/static/myapp/map.png' alt="Queensland" width=40%>
+  <p>
+  <a href="#top">back to the top</a>
+  <p>
+  </div>
+
+<div style="background-color:lightgreen;color:white;padding:20px;">
+  <h2 id="C3">Social housing vacancies</h2>
+  <p>
+  Average days a social housing property remains vacant until new residents move in varies a lot across different property types as well as across LGAs.
+  The plot presents tha vacancy rates for four of the most populous LGAs in QLD. Understanding the utilization of the existing stock is crucial for the planning of future housing developments.
+  <p>
+  <img src='/static/myapp/q3.png' alt="SHvacancies" width=70%>
+  <p>
+  <a href="#top">back to the top</a>
+  <p>
+  </div>
+
+  <div style="background-color:darkgreen;color:white;padding:20px;">
+  <h2 id="C0">Background Information:</h2>
+  <p>
+  <p>
+  <b>Definition of terms:</b>
+  <p>
+  <u>Loval Government Area (LGA):</u> An LGA is a defined geographic area in the Australian state of Queensland, it can be understood as a neighborhood.
+  <p>
+  <u>Economic Disadvantage Index:</u> This index indicates the economic wealth per LGA and is shown in Quintiles. For each LGA, the index gives us the quintile were is stands in comparison with all LGAs in Queensland.
+  <p>
+  <b>Data sources for the analysis:</b>
+  <p>
+  1. Tenancies of social housing and their characteristics per LGA (neighborhood): <a href=https://data.qld.gov.au/dataset/tenancies-in-government-managed-social-housing/resource/69bbace9-655d-4201-8e39-aff674567806/>here</a>.
+  <p>
+  2. Maintenance of social housing: amount of money spend per LGA: <a href=https://data.qld.gov.au/dataset/property-management-government-owned-assets/resource/f8b9e52e-7d76-4105-9f7c-1b4d24ffdb2a/>here</a>.
+  <p>
+  3. Vacancy days for social housing: turnaround time for finding new residents: <a href=https://data.qld.gov.au/dataset/vacancy-maintenance-and-tenanting-turnaround/resource/774b0f33-0891-4b29-acb1-63d186b0fcff/>here</a>.
+  <p>
+  4. Economic disadvantage index (SEIFA) per LGA: measured in quintiles across all LGAs in Queensland: <a href=http://www.qgso.qld.gov.au/products/tables/seifa/seifa-dis-2011-lga14-pop-weighted.xls/>here</a>.
+  <p>
+  5. Shapefile for LGAs in Queensland: <a href=https://data.qld.gov.au/dataset/local-government-area-boundaries-queensland/resource/df934fc2-8923-4d7f-822f-4bc7a05c499b/>here</a>.
+  <p>
+  <a href="#top">back to the top</a>
+  </div>
+
+
+</body>
+</html>
+
+{% endblock %}

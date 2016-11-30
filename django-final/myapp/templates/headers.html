@@ -1,0 +1,77 @@
+
+<html>
+<head>
+
+  <title><h2 id="top">Social housing in Queensland, Australia </h2></title>
+
+  <link href='http://www.un.org/News/dh/photos/large/2015/September/09-04-2015Refugees_FYROM.jpg' rel='stylesheet' type='text/css'>
+
+<style>
+* { font-family: 'Open Sans', sans-serif; }
+body {margin: 0% 10%;}
+ul.nav {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: auto;
+  background-color: darkgreen;
+}
+ul.nav li { float: left; }
+ul.nav li a {
+  display: inline-block;
+  color: white;
+  padding: 16px 20px;
+  text-decoration: none;
+  font-size: 16px;
+}
+ul.nav li a.active {
+  color: darkgreen;
+  background-color: #FFF;
+  font-weight: bold;
+}
+ul.nav li:hover {
+  background-color: #555;
+  transition: 0.5s;
+}
+img {
+  border: 5px;
+  border-style: solid;
+  border-color: grey;
+  margin: 0px 40px;
+}
+table {
+  align: center;
+  border-width: 5px 0px;
+  border-style: solid;
+  border-color: grey;
+  background: #eee;
+  padding: 0px;
+  border-spacing: 0px;
+}
+th {
+  color: white;
+  background-color: darkgrey;
+}
+th, td {
+  text-align: left;
+  padding: 3px 15px;
+}
+h1 {
+  color: green;
+}
+</style>
+</head>
+<body>
+
+<ul class="nav">
+  <li><a href="#home" class="active">Overview</a></li>
+  <li><a href="#C1">Local Government Areas</a></li>
+  <li><a href="#C2">Map of Queensland</a></li>
+  <li><a href="#C3">Social housing vacancies</a></li>
+  <li><a href="#C0">Background Information</a></li>
+</ul>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
