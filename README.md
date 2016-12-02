@@ -45,7 +45,7 @@ Limitations/ Thoughts for further work:
   c) We would have liked to display the total number of social housing units per LGA on the same map, to somehow compare supply of social housing with economic disadvantage of that neighborhood (using dotdensity or some kind of call-out when hovering over the LGA). This was out of the scope of this project as well.
 
 # 3) Vacancy of social housing unit by bedroom type: see file Question3.ipynb for code
-  We use data set Socialhousingvavancy_2016:  for this task.
+  We use the Vacancy data set for this task.
   We want to create a bar chart showing the average number of days that different size properties are vacant for selected LGAs (ideally dynamic with dropdown selection). We have included the four most populated LGAs in our graph to compare them against the overall mean. Against the wide spread opinion that there is too much supply of multiple-bedroom properties and they are not fully used, we found that these properties have fewer vacancy days than properties with less bedrooms. 
     y-axis: average number of vacant days
     x-axis: bedroom type (all bedroom types, 1, 2, 3, 4+ bedrooms)
