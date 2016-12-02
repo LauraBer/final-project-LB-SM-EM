@@ -52,7 +52,8 @@ Limitations/ Thoughts for further work:
 It would have been nice to include a dynamic feature to change this chart for different LGAs, but we did not get there yet.
 
 # Website
-We worked from the Django-ex folder used for homework 6 and created our own view called projectview.py.
+We worked based on the Django-ex folder used for homework 6 and created our own Django-final folder. 
+Inside this, we created a view called projectview.py.
 We created two templates: website.html and headers.html. Also, we saved the created files from Q1, Q2, and Q3 in the static folder.
 We amended the files models.py and forms.py, to be able to create the dropdown menu for question 1.
 We did not clean up the entire folder, as while trying to do so we broke the code somewhere, and therefore rather left all the examples in order to not delete a file that is needed for the website to run.
